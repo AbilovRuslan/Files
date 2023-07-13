@@ -1,10 +1,10 @@
 import java.util.List;
 
-public class DendiModel {
+public class dendiModel {
     public String name, lastName, birthday, country;
     public List<String> org;
     public int age;
-    public DendiModel.Hero hero;
+    public dendiModel.Hero hero;
 
 
     public static class Hero {

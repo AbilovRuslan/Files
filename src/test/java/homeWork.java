@@ -16,15 +16,15 @@ import java.util.zip.ZipInputStream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class HomeWork {
-    ClassLoader cl = HomeWork.class.getClassLoader();
+public class homeWork {
+    ClassLoader cl = homeWork.class.getClassLoader();
 
     @DisplayName("разбор json файла библиотекой Jackson")
     @Test
     void jsonTest() throws Exception {
         File file = new File("src/test/resources/homeWork/dendi.json");
         ObjectMapper objectMapper = new ObjectMapper();
-        DendiModel dendiModel = objectMapper.readValue(file, DendiModel.class);
+        dendiModel dendiModel = objectMapper.readValue(file, dendiModel.class);
         assertThat(dendiModel.name).isEqualTo("Данил");
         assertThat(dendiModel.hero.mid).isEqualTo("Pudge");
         assertThat(dendiModel.org.get(0)).isEqualTo("NAVI");
